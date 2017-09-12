@@ -6,6 +6,7 @@ Thumbs.db
 *.vspscc
 *.suo
 *.bak
+*.lock.json
 [Bb]in
 [Dd]ebug*/
 obj/
