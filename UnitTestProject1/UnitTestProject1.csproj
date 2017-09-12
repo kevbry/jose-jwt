@@ -49,14 +49,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="JsonWebKeyTest.cs" />
-    <Compile Include="lang\LangTest.cs" />
-    <Compile Include="lang\util\AbstractOption.cs" />
-    <Compile Include="lang\util\Empty.cs" />
-    <Compile Include="lang\util\Extensions.cs" />
-    <Compile Include="lang\util\IOption.cs" />
-    <Compile Include="lang\util\ObjectOption.cs" />
-    <Compile Include="lang\util\Option.cs" />
-    <Compile Include="lang\util\ValueOption.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RFC7515_A1.cs" />
     <Compile Include="RFC7515_A2.cs" />

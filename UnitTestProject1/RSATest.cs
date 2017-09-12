@@ -6,14 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Jose.jwk;
+using System.Security.Cryptography;
 
 namespace UnitTestProject1
 {
     [TestClass]
     public class RSATest
     {
-        [TestMethod]
-        public void ExportImport()
+        [TestMethod()]
+        [ExpectedException(typeof(CryptographicException))]
+        public void ImportFails()
         {
             JWK jwk = new JWK()
             {
@@ -36,6 +38,7 @@ namespace UnitTestProject1
             Console.WriteLine(json);
             jwk = JWK.Parse(json);
 
+            // cannot import RSA private key with only n, e and d
             JWT.Encode("payload", jwk.Key, JwsAlgorithm.RS256);
         }
     }
