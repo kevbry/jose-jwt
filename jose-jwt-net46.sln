@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jose-jwt.net46", "jose-jwt\jose-jwt.net46.csproj", "{C73A8F45-6583-43DB-B25E-FE30514441D4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestsNet46", "UnitTestsNet46\UnitTestsNet46.csproj", "{DA58DD81-3539-4F03-A08C-AF239451D8D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{5EB71442-5A9F-494C-AA96-D5DD780E240E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +23,15 @@ Global
 		{DA58DD81-3539-4F03-A08C-AF239451D8D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA58DD81-3539-4F03-A08C-AF239451D8D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA58DD81-3539-4F03-A08C-AF239451D8D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EB71442-5A9F-494C-AA96-D5DD780E240E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB71442-5A9F-494C-AA96-D5DD780E240E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB71442-5A9F-494C-AA96-D5DD780E240E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB71442-5A9F-494C-AA96-D5DD780E240E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {95CEA77E-A1A4-4F31-8307-4EF44D20EE80}
 	EndGlobalSection
 EndGlobal
