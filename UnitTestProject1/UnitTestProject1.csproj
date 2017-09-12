@@ -49,15 +49,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="JsonWebKeyTest.cs" />
-    <Compile Include="jwk\AbstractJwkAlgorithm.cs" />
-    <Compile Include="jwk\JwkFactory.cs" />
-    <Compile Include="jwk\util\Helpers.cs" />
-    <Compile Include="jwk\IJwkAlgorithm.cs" />
-    <Compile Include="jwk\JWK.cs" />
-    <Compile Include="jwk\JwkEc.cs" />
-    <Compile Include="jwk\JwkOct.cs" />
-    <Compile Include="jwk\JwkRsa.cs" />
-    <Compile Include="jwk\JWKS.cs" />
     <Compile Include="lang\LangTest.cs" />
     <Compile Include="lang\util\AbstractOption.cs" />
     <Compile Include="lang\util\Empty.cs" />

@@ -1,7 +1,7 @@
 ﻿using Jose;
 using System.Collections.Generic;
 
-namespace UnitTestProject1.jwk
+namespace Jose.jwk
 {
     public interface IJwkAlgorithm
     {

@@ -5,8 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
-using UnitTestProject1.jwk;
+using Jose.jwk;
 
 namespace UnitTestProject1
 {

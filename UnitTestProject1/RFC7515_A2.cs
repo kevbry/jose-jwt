@@ -1,7 +1,7 @@
 ﻿using Jose;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using UnitTestProject1.jwk;
+using Jose.jwk;
 
 namespace UnitTestProject1
 {

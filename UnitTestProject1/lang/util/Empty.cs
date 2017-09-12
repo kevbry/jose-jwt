@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UnitTestProject1.lang.util
+namespace Jose.lang.util
 {
     internal sealed class Empty<T> : IOption<T>
     {

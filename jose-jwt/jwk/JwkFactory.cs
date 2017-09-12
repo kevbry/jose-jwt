@@ -2,7 +2,7 @@
 using System;
 using System.Security.Cryptography;
 
-namespace UnitTestProject1.jwk
+namespace Jose.jwk
 {
     public class JwkFactory
     {

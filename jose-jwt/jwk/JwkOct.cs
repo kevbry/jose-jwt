@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Jose;
-using UnitTestProject1.jwk.util;
+using Jose.jwk.util;
 
-namespace UnitTestProject1.jwk
+namespace Jose.jwk
 {
     public class JwkOct : IJwkAlgorithm
     {

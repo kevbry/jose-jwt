@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Jose;
 using System.Security.Cryptography;
 
-namespace UnitTestProject1.jwk
+namespace Jose.jwk
 {
     public abstract class AbstractJwkAlgorithm<K,T> : IJwkAlgorithm where K : AsymmetricAlgorithm
     {

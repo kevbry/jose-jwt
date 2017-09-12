@@ -6,9 +6,9 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using UnitTestProject1.lang.util;
+using Jose.lang.util;
 
-namespace UnitTestProject1.lang
+namespace Jose.lang
 {
     [TestClass]
     public class LangTest

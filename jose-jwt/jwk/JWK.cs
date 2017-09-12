@@ -1,9 +1,9 @@
 ﻿using Jose;
 using System.Collections.Generic;
-using static UnitTestProject1.jwk.JwkFactory;
-using UnitTestProject1.jwk.util;
+using static Jose.jwk.JwkFactory;
+using Jose.jwk.util;
 
-namespace UnitTestProject1.jwk
+namespace Jose.jwk
 {
     public class JWK
     {

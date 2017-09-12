@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
-using UnitTestProject1.jwk.util;
+using Jose.jwk.util;
 
-namespace UnitTestProject1.jwk
+namespace Jose.jwk
 {
     public class JwkEc : AbstractJwkAlgorithm<ECDsa,ECParameters>
     {

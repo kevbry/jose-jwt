@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace UnitTestProject1.jwk.util
+namespace Jose.jwk.util
 {
     public static class Helpers
     {

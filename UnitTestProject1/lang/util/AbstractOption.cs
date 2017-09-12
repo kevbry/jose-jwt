@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace UnitTestProject1.lang.util
+namespace Jose.lang.util
 {
     public abstract class AbstractOption<T> : IOption<T>
     {
