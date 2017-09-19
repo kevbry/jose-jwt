@@ -48,15 +48,29 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RFC7516_A_JWE_Examples.cs" />
+    <Compile Include="RFC7517_A_JWK_Examples.cs" />
+    <Compile Include="RFC7517_B_JWK_Examples.cs" />
+    <Compile Include="RFC7517_C_JWK_Examples.cs" />
+    <Compile Include="RFC7519_A_JWT_Examples.cs" />
+    <Compile Include="util\Helpers.cs" />
     <Compile Include="JsonWebKeyTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RFC7515_A1.cs" />
-    <Compile Include="RFC7515_A2.cs" />
-    <Compile Include="RFC7515_A3.cs" />
+    <Compile Include="RFC7515_A_JWS_Examples.cs" />
     <Compile Include="RSATest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="RFC7515_A1.json" />
     <None Include="packages.config" />
+    <EmbeddedResource Include="RFC7515_A2.json" />
+    <EmbeddedResource Include="RFC7515_A3.json" />
+    <EmbeddedResource Include="RFC7516_A1.json" />
+    <EmbeddedResource Include="RFC7516_A2.json" />
+    <EmbeddedResource Include="RFC7516_A3.json" />
+    <EmbeddedResource Include="RFC7517_A1.json" />
+    <EmbeddedResource Include="RFC7517_A2.json" />
+    <EmbeddedResource Include="RFC7517_A3.json" />
+    <EmbeddedResource Include="RFC7517_B.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\jose-jwt\jose-jwt.net46.csproj">
