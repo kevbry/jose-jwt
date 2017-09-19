@@ -12,7 +12,7 @@ namespace UnitTestProject1
     [TestClass]
     public class JsonWebKeyTest
     {
-        public static JwtSettings Settings { get { return JWT.DefaultSettings; } }
+        public static JwtSettings Settings { get => JWT.DefaultSettings; }
         public static RSA CreateRSA(int keySize = 2048)
         {
 #if !NOT

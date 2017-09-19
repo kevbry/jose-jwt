@@ -38,13 +38,15 @@ namespace UnitTestProject1
                 + "HDjUEOKIwrtkHthpqEanSBNYHZgmNOV7sln1Eu9g3J8"
                 + "."
                 + "fiK51VwhsxJ-siBMR-YFiA";
+            const string PAYLOAD = ""
+                + "eyJpc3MiOiJqb2UiLA0KICJleHAiOjEzMDA4MTkzODAsDQogImh0dHA6Ly9leGFt"
+                + "cGxlLmNvbS9pc19yb290Ijp0cnVlfQ";
             string json = Helpers.ReadResource(typeof(RFC7516_A_JWE_Examples), "RFC7516_A2.json");
             Assert.IsNotNull(json);
             var jwk = JWK.Parse(json);
             Assert.IsNotNull(jwk);
             var s = JWT.Decode(TOKEN, jwk.Key);
-            Assert.IsNotNull(s);
-            Console.WriteLine(s);
+            Assert.AreEqual(Encoding.UTF8.GetString(Base64Url.Decode(PAYLOAD)), s);
         }
         /// <summary>
         /// https://tools.ietf.org/html/rfc7519#appendix-A.2
@@ -77,13 +79,27 @@ namespace UnitTestProject1
                 + "_J9N0mg0tQ6RbpxNEMNoA9QWk5lgdPvbh9BaO195abQ"
                 + "."
                 + "AVO9iT5AV4CzvDJCdhSFlQ";
-            string json = Helpers.ReadResource(typeof(RFC7516_A_JWE_Examples), "RFC7516_A2.json");
-            Assert.IsNotNull(json);
-            var jwk = JWK.Parse(json);
-            Assert.IsNotNull(jwk);
-            var s = JWT.Decode(TOKEN, jwk.Key);
-            Assert.IsNotNull(s);
-            Console.WriteLine(s);
+            const string PAYLOAD = ""
+                + "eyJpc3MiOiJqb2UiLA0KICJleHAiOjEzMDA4MTkzODAsDQogImh0dHA6Ly9leGFt"
+                + "cGxlLmNvbS9pc19yb290Ijp0cnVlfQ";
+
+            // decrypt with key from JWE A2
+
+            string json1 = Helpers.ReadResource(typeof(RFC7516_A_JWE_Examples), "RFC7516_A2.json");
+            Assert.IsNotNull(json1);
+            var jwk1 = JWK.Parse(json1);
+            Assert.IsNotNull(jwk1);
+            var s1 = JWT.Decode(TOKEN, jwk1.Key);
+
+            // verify signature with key from JWS A2
+
+            string json2 = Helpers.ReadResource(typeof(RFC7515_A_JWS_Examples), "RFC7515_A2.json");
+            Assert.IsNotNull(json2);
+            var jwk2 = JWK.Parse(json2);
+            Assert.IsNotNull(jwk2);
+            var s2 = JWT.Decode(s1, jwk2.Key);
+
+            Assert.AreEqual(Encoding.UTF8.GetString(Base64Url.Decode(PAYLOAD)), s2);
         }
     }
 }
