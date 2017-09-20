@@ -8,14 +8,13 @@ using System.Threading.Tasks;
 
 namespace Jose.jwk.util
 {
-    public static class Helpers
+    internal static class Helpers
     {
-        public static bool TryGet<T>(this IDictionary<string, object> json, string key, out T value) 
+        internal static bool TryGet<T>(this IDictionary<string, object> json, string key, out T value) 
         {
-            object t;
-            if(json.TryGetValue(key, out t))
+            if (json.TryGetValue(key, out object t))
             {
-                if(t is T)
+                if (t is T)
                 {
                     value = (T)t;
                     return true;
@@ -24,23 +23,23 @@ namespace Jose.jwk.util
             value = default(T);
             return false;
         }
-        public static byte[] GetBytes(this IDictionary<string, object> json, string key)
+        internal static byte[] GetBytes(this IDictionary<string, object> json, string key)
         {
             return json.TryGet<string>(key, out string value)
                 ? Base64Url.Decode(Regex.Replace(value, @"\s+", "", RegexOptions.Multiline))
                 : null;
         }
-        public static string GetString(this IDictionary<string, object> json, string key)
+        internal static string GetString(this IDictionary<string, object> json, string key)
         {
             return json.TryGet<string>(key, out string value)
                 ? value
                 : null;
         }
-        public static void Set(this IDictionary<string, object> json, string key, string value)
+        internal static void Set(this IDictionary<string, object> json, string key, string value)
         {
             json.Add(key, value);
         }
-        public static void Set(this IDictionary<string, object> json, string key, byte[] value)
+        internal static void Set(this IDictionary<string, object> json, string key, byte[] value)
         {
             json.Set(key, Base64Url.Encode(value));
         }

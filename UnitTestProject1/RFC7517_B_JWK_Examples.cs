@@ -35,8 +35,9 @@ namespace UnitTestProject1
             Assert.IsTrue(jwks[0].IsSignature);
             Assert.AreEqual("1b94c", jwks[0].Id);
 
-            Assert.IsTrue(jwks[0].Header.TryGet<IList>("x5c", out IList x5c));
+            Assert.IsInstanceOfType(jwks[0].Header["x5c"], typeof(IList));
 
+            IList x5c = jwks[0].Header["x5c"] as IList;
             var list = x5c.OfType<string>()
                 .Select(t => Convert.FromBase64String(t))
                 .Select(t => new X509Certificate2(t))

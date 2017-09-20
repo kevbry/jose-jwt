@@ -10,7 +10,7 @@ namespace Jose.jwk
 
         public static JwkFactory Factory { get => _instance; }
 
-        public virtual JwtSettings GetSettings(JwtSettings settings)
+        internal virtual JwtSettings GetSettings(JwtSettings settings)
         {
             return settings ?? JWT.DefaultSettings;
         }

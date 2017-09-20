@@ -32,7 +32,7 @@ namespace UnitTestProject1
             map.Remove("dp");
             map.Remove("dq");
             map.Remove("qi");
-            string json = JwkFactory.Factory.GetSettings(null)
+            string json = JWT.DefaultSettings
                 .JsonMapper
                 .Serialize(map);
             Console.WriteLine(json);
