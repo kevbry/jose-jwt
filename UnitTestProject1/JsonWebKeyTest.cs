@@ -31,7 +31,7 @@ namespace UnitTestProject1
         }
         public static ECDsa CreateEC(ECCurve curve)
         {
-            var ec = new ECDsaCng();
+            var ec = ECDsa.Create();
             ec.GenerateKey(curve);
             return ec;
         }

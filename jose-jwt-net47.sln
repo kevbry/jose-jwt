@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jose-jwt.net47", "jose-jwt\jose-jwt.net47.csproj", "{970F3126-0B06-4944-BA97-534208739DD4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{C8D8EFCF-2104-4118-84BB-BBB9752DCA63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{970F3126-0B06-4944-BA97-534208739DD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{970F3126-0B06-4944-BA97-534208739DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{970F3126-0B06-4944-BA97-534208739DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{970F3126-0B06-4944-BA97-534208739DD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8D8EFCF-2104-4118-84BB-BBB9752DCA63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8D8EFCF-2104-4118-84BB-BBB9752DCA63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8D8EFCF-2104-4118-84BB-BBB9752DCA63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8D8EFCF-2104-4118-84BB-BBB9752DCA63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {236E108D-D28B-4109-B069-2ED5637DCB2C}
+	EndGlobalSection
+EndGlobal
