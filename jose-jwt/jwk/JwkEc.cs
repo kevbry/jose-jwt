@@ -86,7 +86,7 @@ namespace Jose.jwk
 
         protected override ECDsa CreateAlgorithm(ECParameters parameters)
         {
-            var ec = new ECDsaCng();
+            var ec = ECDsa.Create();
             ec.ImportParameters(parameters);
             return ec;
         }

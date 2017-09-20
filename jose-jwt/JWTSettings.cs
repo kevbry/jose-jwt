@@ -1,6 +1,8 @@
 ﻿using Jose.jwe;
 using System.Collections.Generic;
 using System;
+using Jose.jwk;
+using System.Security.Cryptography;
 
 namespace Jose
 {
@@ -274,6 +276,36 @@ namespace Jose
                 return aliasMatch;
             }
             throw new InvalidAlgorithmException(string.Format("JWE algorithm is not supported: {0}", headerValue));
+        }
+
+        //JWK
+
+        public IJwkAlgorithm JwkAlgorithmFromHeader(string kty)
+        {
+            switch (kty)
+            {
+                case "oct": return new JwkOct();
+                case "RSA": return new JwkRsa();
+                case "EC": return new JwkEc();
+                default: throw new InvalidAlgorithmException(string.Format("JWK type not supported: {0}", kty));
+            }
+        }
+
+        public IJwkAlgorithm JwkAlgorithmFromKey(object key)
+        {
+            if (key is byte[])
+            {
+                return new JwkOct();
+            }
+            if (key is RSA)
+            {
+                return new JwkRsa();
+            }
+            if (key is ECDsa)
+            {
+                return new JwkEc();
+            }
+            throw new InvalidAlgorithmException(string.Format("Key type not supported: {0}", key.GetType().Name));
         }
 
         //JWA algorithm

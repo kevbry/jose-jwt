@@ -1,6 +1,4 @@
-﻿using Jose;
-using System.Collections.Generic;
-using static Jose.jwk.JwkFactory;
+﻿using System.Collections.Generic;
 using Jose.jwk.util;
 
 namespace Jose.jwk
@@ -9,11 +7,11 @@ namespace Jose.jwk
     {
         public static JWK Parse(string json, JwtSettings settings = null)
         {
-            settings = Factory.GetSettings(settings);
+            settings = settings ?? JWT.DefaultSettings;
             IDictionary<string, object> header = settings.JsonMapper
                 .Parse<Dictionary<string, object>>(json);
-            return Factory
-                .JwkAlgorithmFromHeader(header.GetString("kty"), settings)
+            return settings
+                .JwkAlgorithmFromHeader(header.GetString("kty"))
                 .Parse(header, settings);
         }
         public JWK()
@@ -29,9 +27,9 @@ namespace Jose.jwk
         public object Key { get; set; }
         public string Serialize(bool includePrivateParameters = false, JwtSettings settings = null)
         {
-            settings = Factory.GetSettings(settings);
-            IDictionary<string,object> header = Factory
-                .JwkAlgorithmFromKey(Key, settings)
+            settings = settings ?? JWT.DefaultSettings;
+            IDictionary<string,object> header = settings
+                .JwkAlgorithmFromKey(Key)
                 .Serialize(this, includePrivateParameters, settings);
             return settings.JsonMapper.Serialize(header);
         }

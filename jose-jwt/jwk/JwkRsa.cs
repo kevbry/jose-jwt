@@ -53,18 +53,7 @@ namespace Jose.jwk
 
         protected override RSA CreateAlgorithm(RSAParameters parameters)
         {
-#if NOT
-            var csp = new CspParameters()
-            {
-                Flags = CspProviderFlags.CreateEphemeralKey
-            };
-            var rsa = new RSACryptoServiceProvider(csp)
-            {
-                PersistKeyInCsp = false
-            };
-#else
-            var rsa = new RSACng();
-#endif
+            var rsa = RSA.Create();
             rsa.ImportParameters(parameters);
             return rsa;
         }

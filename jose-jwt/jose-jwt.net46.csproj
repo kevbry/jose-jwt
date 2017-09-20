@@ -69,7 +69,6 @@
     <Compile Include="jwk\IJwkAlgorithm.cs" />
     <Compile Include="jwk\JWK.cs" />
     <Compile Include="jwk\JwkEc.cs" />
-    <Compile Include="jwk\JwkFactory.cs" />
     <Compile Include="jwk\JwkOct.cs" />
     <Compile Include="jwk\JwkRsa.cs" />
     <Compile Include="jwk\JWKS.cs" />

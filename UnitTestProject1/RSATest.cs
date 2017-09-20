@@ -24,7 +24,7 @@ namespace UnitTestProject1
 
             JWT.Encode("payload", jwk.Key, JwsAlgorithm.RS256);
 
-            var map = JwkFactory.Factory
+            var map = JWT.DefaultSettings
                 .JwkAlgorithmFromKey(jwk.Key)
                 .Serialize(jwk, true);
             map.Remove("p");
