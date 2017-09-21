@@ -10,6 +10,13 @@
     <EmbeddedResource Include="RFC7515_A1.json" />
     <EmbeddedResource Include="RFC7515_A2.json" />
     <EmbeddedResource Include="RFC7515_A3.json" />
+    <EmbeddedResource Include="RFC7516_A1.json" />
+    <EmbeddedResource Include="RFC7516_A2.json" />
+    <EmbeddedResource Include="RFC7516_A3.json" />
+    <EmbeddedResource Include="RFC7517_A1.json" />
+    <EmbeddedResource Include="RFC7517_A2.json" />
+    <EmbeddedResource Include="RFC7517_A3.json" />
+    <EmbeddedResource Include="RFC7517_B.json" />
   </ItemGroup>
 
   <ItemGroup>
