@@ -14,7 +14,7 @@ namespace UnitTestProject2
         public static JwtSettings Settings { get => JWT.DefaultSettings; }
         public static RSA CreateRSA(int keySize = 2048)
         {
-#if !NOT
+#if NOT
             CspParameters csp = new CspParameters()
             {
                 Flags = CspProviderFlags.CreateEphemeralKey
@@ -24,7 +24,7 @@ namespace UnitTestProject2
                 PersistKeyInCsp = false
             };
 #else
-            var rsa = new RSACng(keySize);
+            var rsa = RSA.Create(keySize);
 #endif
             return rsa;
         }
